@@ -86,7 +86,7 @@ img {
     position: absolute;
     left: 0;
     width: 100%;
-    bottom: -4px;
+    bottom: -2px;
 
     height: 4px;
     background: #404BBF;
@@ -213,9 +213,6 @@ img {
 .hero {
     padding-bottom: 188px;
     padding-top: 188px;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
 
     background-color: var(--main-title-color);
     display: block;
@@ -302,7 +299,7 @@ button.hero-btn {
 }
 
 .prinsiples-item {
-    width: calc((100%-3*24px)/4);
+    width: calc((100% - 3 * 24px) / 4);
 }
 
 .prinsiples-subtitle {
@@ -340,13 +337,12 @@ button.hero-btn {
 }
 
 .doing-item {
-    width: calc((100%-24px*2)/3);
+    width: calc((100% - 24px * 2) / 3);
 }
 
 /*-----------section4 team----------*/
 
 .team {
-    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
 
@@ -372,7 +368,7 @@ button.hero-btn {
 }
 
 .team-item {
-    width: calc((100%-24px*3)/4);
+    width: calc((100% - 24px * 3) / 4);
 }
 
 .team-member {
@@ -457,7 +453,7 @@ button.hero-btn {
 }
 
 .customers-item {
-    width: calc((100%-24px*5)/6);
+    width: calc((100% - 24px * 5) / 6);
     height: 88px;
 }
 
@@ -563,14 +559,12 @@ button.hero-btn {
 
 .portfolio-item {}
 
-.portfolio-item:hover .portfolio-top-text {
+.portfolio-item:is(:hover, :focus) .portfolio-top-text {
     transform: translateY(0%);
-
 }
 
-
 .portfolio-item .img {
-    width: calc((100%-2*24px)/3);
+    width: calc((100% - 2 * 24px) / 3);
 
     display: flex;
 }
@@ -602,16 +596,16 @@ button.hero-btn {
     overflow: auto;
 }
 
-.portfolio-link {}
-
-.portfolio-link-wrap {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-
+.portfolio-link {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-link-wrap:is(:hover, :focus) {
+.portfolio-link:is(:hover, :focus) {
     box-shadow: inset 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-link-wrap {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-subtxt-wrap {
@@ -635,9 +629,6 @@ button.hero-btn {
 /*------------------ FOOTER------------------- */
 
 .footer {
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
 
     background-color: var(--main-title-color);
     padding-top: 100px;
@@ -761,17 +752,24 @@ button.hero-btn {
     display: flex;
     align-items: center;
 
+    cursor: pointer;
+
+
     border-radius: 50%;
     width: 24px;
     height: 24px;
     background: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
+}
 
-
-
+.modal-close:is(:hover, :focus) {
+    background: #404BBF;
 }
 
 .btn-modal-close-icon {
     color: #000000;
+}
 
+.modal-close:is(:hover, :focus) .btn-modal-close-icon {
+    fill: #FFFFFF;
 }
